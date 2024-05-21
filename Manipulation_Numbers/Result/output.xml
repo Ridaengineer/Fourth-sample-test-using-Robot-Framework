@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-21T16:27:37.748721" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Numbers" source="C:\Python\Manipulation_Numbers\Test\Test_Numbers.robot">
+<test id="s1-t1" name="Log and Sleep Example" line="9">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-21T16:27:37.780360" level="INFO">This is a log message</msg>
+<arg>This is a log message</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-21T16:27:37.780360" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.780944" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-21T16:27:37.780360" elapsed="3.000584"/>
+</kw>
+<doc>Example of logging and pause.</doc>
+<status status="PASS" start="2024-05-21T16:27:37.780360" elapsed="3.000584"/>
+</test>
+<test id="s1-t2" name="Check Equality Example" line="14">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${NUMBER1}</arg>
+<arg>1</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.780944" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${NUMBER2}</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.780944" elapsed="0.000000"/>
+</kw>
+<doc>Check the equality of two numbers.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.780944" elapsed="0.000000"/>
+</test>
+<test id="s1-t3" name="Conditional Keyword Example" line="19">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.784963" level="INFO">${is_greater} = True</msg>
+<var>${is_greater}</var>
+<arg>${NUMBER2} &gt; ${NUMBER1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.784963" level="INFO">2 is greater than 1</msg>
+<arg>${NUMBER2} is greater than ${NUMBER1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<arg>${is_greater}</arg>
+<arg>Log</arg>
+<arg>${NUMBER2} is greater than ${NUMBER1}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<doc>Executes a keyword conditionally.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</test>
+<test id="s1-t4" name="Set and Get Global Variable Example" line="24">
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.784963" level="INFO">${GLOBAL_VAR} = This is a global variable</msg>
+<arg>${GLOBAL_VAR}</arg>
+<arg>This is a global variable</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<kw name="Get Variable Value" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.784963" level="INFO">${global_value} = This is a global variable</msg>
+<var>${global_value}</var>
+<arg>${GLOBAL_VAR}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-21T16:27:40.784963" level="INFO">This is a global variable</msg>
+<arg>${global_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</kw>
+<doc>Defines and retrieves a global variable.</doc>
+<status status="PASS" start="2024-05-21T16:27:40.784963" elapsed="0.000000"/>
+</test>
+<status status="PASS" start="2024-05-21T16:27:37.748721" elapsed="3.036242"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test Numbers">Test Numbers</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
